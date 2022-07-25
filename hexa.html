@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Hexa</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="inner-container left-side">
+					<img src="img/profile.jpg" class="profile">
+
+					<p><b id="username"></b></p>
+					<p id="email"></p>
+
+					<button id="editAccount">Iznmeni profil</button>
+					<button id="logout">Odjavi se</button>
+				</div>
+
+				<div class="search-filter">
+					<h4>Izaberite autora:</h4>
+					<select id="chooseOption">
+						<option value="izaberi" selected>Izaberi</option>
+					</select>
+				</div>
+
+				<div class="search-filter">
+					<h4>Nadjite post:</h4>
+					<input type="text" name="search" id="inputSearch" onkeyup="search()">
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="inner-container right-side">
+					<form id="postForm">
+						<textarea id="postContent" placeholder="Napisi nesto i objavi"></textarea>
+						<button>Objavi</button>
+					</form>
+
+					<div id="allPostsWrapper"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="custom-modal">
+		<button id="closeModal">X</button>
+
+		<form id="editForm">
+			<h2>Izmeni svoj profil</h2>
+
+			<div>
+			<label for="korisnicko_ime">Korisničko ime:</label>
+			<input id="korisnicko_ime" type="text" name="korisnicko_ime" placeholder="niko.nikolic1">
+		</div>
+
+		<div>
+			<label for="email">Email adresa:</label>
+			<input id="edit_email" type="text" name="register_email" placeholder="niko.nikolic@mail.com">
+		</div>
+
+		<div>
+			<button>Izmeni</button>
+		</div>
+		</form>
+
+		<hr>
+
+		<button id="deleteProfile">OBRISI PROFIL</button>
+	</div>
+
+
+	<script src="js/Session.js"></script>
+	<script src="js/User.js"></script>
+	<script src="js/Comment.js"></script>
+	<script src="js/Post.js"></script>
+	<script src="js/hexa.js"></script>
+</body>
+</html>
